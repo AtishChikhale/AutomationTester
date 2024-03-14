@@ -12,7 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class thirdlink {
-public static void main(String[] args) throws IOException {
+public static void main(String[] args) throws Exception {
+
+	ScreenRecorderUtil.startRecord("main");
+
 	Date currDate = new Date();
 	String screenshotsfilename = currDate.toString().replace(" ", "-").replace(":", "-");
 //	System.out.print(screenshotsfilename);
@@ -52,5 +55,6 @@ public static void main(String[] args) throws IOException {
 	
 	driver.close();
 	
+	ScreenRecorderUtil.stopRecord();
 }
 }
